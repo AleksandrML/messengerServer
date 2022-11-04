@@ -8,8 +8,7 @@ public class SettingsReader {
         try(BufferedReader br = new BufferedReader(new FileReader("settings.txt"))) {
             String line = br.readLine();
 
-            boolean portFound = false;
-            while (line != null && !portFound) {
+            while (line != null) {
                 if (line.contains("port:")) {
                     line = line.replace("port:", "").strip();
                     return Integer.parseInt(line);
