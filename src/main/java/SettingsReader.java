@@ -13,6 +13,7 @@ public class SettingsReader {
                     line = line.replace("port:", "").strip();
                     return Integer.parseInt(line);
                 }
+                line = br.readLine();
             }
             System.out.println("add port number as 'port: int_number' to settings.txt file");
             throw new RuntimeException();
